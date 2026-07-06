@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - slides.qmd
+
+execute:
+  freeze: auto
+
+website:
+  title: "Data Science and AI for Data-Driven Transport Planning"
+  repo-url: "https://github.com/itsleeds/tdca"
+  repo-actions: [issue]
+  page-footer:
+    right: "Built with [Quarto](https://quarto.org/)."
+    left: "TDCA — Institute for Transport Studies, University of Leeds"
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Slides"
+        href: slides.qmd
+
+format:
+  html:
+    theme: lux
+    toc: true

@@ -1,14 +1,10 @@
 ---
 title: "Data Science and AI for Data-Driven Transport Planning"
 subtitle: "Transport Data Collection and Analysis (TDCA)"
-author: "Robin Lovelace"
+format: clean-revealjs
+author: "Robin Lovelace<br><br><span style='font-size:0.7em'>Online version: <a href='https://itsleeds.github.io/tdca/slides.html'>itsleeds.github.io/tdca</a></span><br><span style='font-size:0.7em'>Source: <a href='https://github.com/itsleeds/tdca'>github.com/itsleeds/tdca</a></span>"
 date: last-modified
-format: 
-  revealjs:
-    theme: [default, styles.css]
-    footer: "TDCA - University of Leeds"
-    chalkboard: true
-bibliography: tds.bib
+bibliography: references.bib
 ---
 
 ## Introduction
@@ -29,13 +25,22 @@ bibliography: tds.bib
 
 ## AI for Transport Planning
 
+::::: columns
+::: {.column width="50%"}
+
 - AI is transforming transport: real-time traffic prediction, demand-responsive transit, safety analysis, autonomous vehicles.
 - **But AI without reproducibility is a black box** — results that can't be re-run can't be trusted.
 - **Reproducible data science environments** (Python/R scripts, Quarto documents, version-controlled pipelines) are the best way to integrate AI because:
 
+:::
+::: {.column width="50%"}
+
 > **AI-powered programming**: AI coding assistants (e.g. GitHub Copilot, Codex) help write, debug, and explain code — lowering barriers and accelerating analysis.
 
 > **Agentic loops**: an AI agent can be asked to keep iterating on a task — refining a model, tuning a parameter, improving a visualisation — until a satisfactory result is generated, all within a reproducible script.
+
+:::
+:::::
 
 - The key insight: AI works best when the environment is **defined in code**, so every iteration is captured, auditable, and repeatable.
 
@@ -59,13 +64,28 @@ bibliography: tds.bib
 
 ## Tools of the Trade
 
+::::: columns
+::: {.column width="50%"}
+
 - **Python:** A first-class citizen in data science and AI. Versatile and powerful.
 - **R:** Excellent for statistics and spatial analysis [@arribas-bel_course_2019].
 - **Quarto:** The multi-language publishing tool — mixes code, text, and output; renders to slides, PDF, HTML [@allaire_quarto_2024].
+
+:::
+::: {.column width="50%"}
+
 - **AI coding assistants:** Tools like GitHub Copilot work directly in your editor, helping you write, understand, and debug code faster.
 - **The ecosystem:** These tools combine — Python/R for analysis, Quarto for communication, AI assistants for productivity.
 
+![Reproducible data science ecosystem](images/Mobile-Tartu-Wallpaper-Image-For-Quarto-Presentation.png){width="80%" fig-alt="Reproducible data science environment"}
+
+:::
+:::::
+
 ## Interactive Visualisations
+
+::::: columns
+::: {.column width="50%"}
 
 - Made possible with code (e.g., Python's `Streamlit`, `Plotly`, or R's `Shiny`).
 - **Impact:** Stakeholders can "play" with the data.
@@ -73,6 +93,14 @@ bibliography: tds.bib
   - Propensity to Cycle Tool (PCT)
   - Interactive road safety maps.
 - *Increases the transparency and reach of research.*
+
+:::
+::: {.column width="50%"}
+
+![OD flow map example from Pamplona dataset](images/Flowmap-Blue-Of-Pamplona-OD-Flows.png){width="100%" fig-alt="Interactive flow map showing origin-destination data"}
+
+:::
+:::::
 
 ## Making the Most of Transport Data
 
@@ -84,5 +112,34 @@ bibliography: tds.bib
 - **AI can help**: anomaly detection in sensor streams, clustering travel patterns, predicting demand.
 - This module (TDCA) builds the foundation for working with transport data **by hand and with code**.
 - Subsequent modules build on this — the skills you learn here apply across the programme.
+- **Next:** [Transport Data Science (TDS)](https://itsleeds.github.io/tds/) takes this further with routing, web APIs, and machine learning.
 
-## References
+## Reproducible Workflow with AI
+
+```{mermaid}
+flowchart LR
+  subgraph Source["Source"]
+    A[Raw transport data<br/>sensors, GPS, smart cards]
+    B[Scripts<br/>Python / R / Quarto]
+  end
+  subgraph AI_Layer["AI Integration"]
+    C[AI coding assistant<br/>Copilot / Codex]
+    D[Agentic loop<br/>iterate, refine, verify]
+  end
+  subgraph Output["Reproducible Output"]
+    E[Interactive dashboards<br/>Streamlit / Shiny]
+    F[Published slides<br/>Quarto revealjs]
+    G[Version-controlled<br/>Git / GitHub]
+  end
+  A --> B
+  B <--> C
+  C <--> D
+  B --> E
+  B --> F
+  B --> G
+```
+
+## References {scrollable="true"}
+
+::: {#refs}
+:::
