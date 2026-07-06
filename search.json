@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "slides.html#introduction",
+    "href": "slides.html#introduction",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "Introduction",
+    "text": "Introduction\n\nContext: new digital tools for transport planning\nReproducible data science -&gt; impact\nReproducible data science -&gt; effectively integrate AI into your work\nExcel-based analysis -&gt; dynamic, reproducible, scalable workflows\nAI has potential to reshape every sector and organisation\n\nPotential only realised by people using reproducible workflows\n\nGoal: explain what this means and how to get started in this space"
+  },
+  {
+    "objectID": "slides.html#what-are-data-science-and-ai",
+    "href": "slides.html#what-are-data-science-and-ai",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "What are Data Science and AI?",
+    "text": "What are Data Science and AI?\n\nData science: turns raw data into understanding and insight\n\n\nAI: generative language models to generate code and other outputs for decision-making.\n\n\nMachine Learning: pattern recognition, prediction, and optimisation: from traffic forecasting to demand modelling.\nIn transport, this means handling a wide range of data sources including datasets on transport infrastructure, behaviour and more\n\nThere’s more data than ever before\nExample: OpenStreetMap data which is available worldwide (Boeing 2017)."
+  },
+  {
+    "objectID": "slides.html#ai-for-transport-planning",
+    "href": "slides.html#ai-for-transport-planning",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "AI for Transport Planning",
+    "text": "AI for Transport Planning\n\nAI is transforming transport (e.g., traffic prediction, safety analysis), but its value is unlocked only when integrated into reproducible workflows.\nWhy reproducible environments are the best way to leverage AI:\n\n\n\n\n\n\n\n\n\nKey Advantage\nHow Reproducibility Enables This\nImpact on AI & Planning\n\n\n\n\nAuditability & Trust\nVersion control (Git) logs every step, dataset, and random seed.\nPrevents black-box results; ensures public policy decisions are auditable.\n\n\nAI-Assisted Coding\nWorkflows are text-based scripts (Python/R) rather than hidden GUI menus.\nAI assistants can directly write, debug, and explain code in your editor.\n\n\nAgentic Loops\nExecution pipelines are programmatic, automated, and self-contained.\nAI agents can run automated loops to optimize parameters and test models.\n\n\nRobust Stability\nPackage managers (Conda/Pip) pin dependencies and library versions.\nCombats the non-deterministic nature of AI to ensure consistent results.\n\n\n\n\nThe key insight: AI works best when the environment is defined in code, so every iteration is captured, auditable, and repeatable."
+  },
+  {
+    "objectID": "slides.html#why-reproducibility-matters",
+    "href": "slides.html#why-reproducibility-matters",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "Why Reproducibility Matters",
+    "text": "Why Reproducibility Matters\n\nReproducibility: Others (or future you) can run your code and get the exact same results.\nExcel vs. Code:\n\nExcel: Steps are hidden behind point-and-click menus; difficult to audit, version, or scale.\nCode: Every transformation is explicitly documented, version-controlled, and repeatable.\n\nAI + Reproducibility: AI assistants help write reproducible pipelines faster, but the pipeline must remain transparent and scripted to be verified.\nTransparency: Crucial for public policy and planning — AI-driven decisions in transport affect people’s lives."
+  },
+  {
+    "objectID": "slides.html#the-power-of-ai-powered-programming",
+    "href": "slides.html#the-power-of-ai-powered-programming",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "The Power of (AI-Powered) Programming",
+    "text": "The Power of (AI-Powered) Programming\n\nFlexibility: You are not limited by what a GUI dropdown menu allows.\nScalability: The same script can process 10 rows or 10 million rows.\nSharing & Collaboration: Open-source packages mean you stand on the shoulders of giants.\nAutomation: Spend more time thinking and designing solutions, less time copy-pasting.\nAI as an Accelerator: Assistants generate boilerplate and explain errors, but understanding the code you run is still essential.\nThe Learning Curve: Programming has a steeper start than point-and-click tools. The Python tutorials in this module are designed to guide you step-by-step."
+  },
+  {
+    "objectID": "slides.html#tools-of-the-trade",
+    "href": "slides.html#tools-of-the-trade",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "Tools of the Trade",
+    "text": "Tools of the Trade\n\n\n\nPython: A first-class citizen in data science and AI. Versatile and powerful.\nR: Excellent for statistics and spatial analysis (Arribas-Bel 2019).\nQuarto: The multi-language publishing tool — mixes code, text, and output; renders to slides, PDF, HTML (Allaire et al. 2024).\n\n\n\nAI coding assistants: Tools like GitHub Copilot work directly in your editor, helping you write, understand, and debug code faster.\nThe ecosystem: These tools combine — Python/R for analysis, Quarto for communication, AI assistants for productivity.\n\n\n\n\nReproducible data science ecosystem"
+  },
+  {
+    "objectID": "slides.html#interactive-visualisations",
+    "href": "slides.html#interactive-visualisations",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "Interactive Visualisations",
+    "text": "Interactive Visualisations\n\n\n\nMade possible with code (e.g., Python’s Streamlit, Plotly, or R’s Shiny).\nImpact: Stakeholders can “play” with the data.\nExamples:\n\nPropensity to Cycle Tool (PCT)\nInteractive road safety maps.\n\nIncreases the transparency and reach of research.\n\n\n\n\n\nOD flow map example from Pamplona dataset"
+  },
+  {
+    "objectID": "slides.html#making-the-most-of-transport-data",
+    "href": "slides.html#making-the-most-of-transport-data",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "Making the Most of Transport Data",
+    "text": "Making the Most of Transport Data\n\nDiverse Data Sources: Smart card taps, GPS trajectories, traffic counts, and crowd-sourced feeds.\nWhere the value lies: Not in raw datasets, but in your processing pipeline:\n\nClean & Validate: Handling missing values, sensor failures, and anomalies.\nVisualise: Exposing spatial patterns, bottlenecks, and travel trends.\nModel: Predicting demand and optimizing traffic flow.\n\nHow AI Enhances This: Automating anomaly detection, clustering travel patterns, and forecasting future demand.\nFoundation for the Future: TDCA builds the core skills for working with transport data. These scale directly into next modules like Transport Data Science (TDS)."
+  },
+  {
+    "objectID": "slides.html#reproducible-workflow-with-ai",
+    "href": "slides.html#reproducible-workflow-with-ai",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "Reproducible Workflow with AI",
+    "text": "Reproducible Workflow with AI\n\n\n\n\n\nflowchart LR\n  subgraph Source[\"Source\"]\n    A[Raw transport data&lt;br/&gt;sensors, GPS, smart cards]\n    B[Scripts&lt;br/&gt;Python / R / Quarto]\n  end\n  subgraph AI_Layer[\"AI Integration\"]\n    C[AI coding assistant&lt;br/&gt;Copilot / Codex]\n    D[Agentic loop&lt;br/&gt;iterate, refine, verify]\n  end\n  subgraph Output[\"Reproducible Output\"]\n    E[Interactive dashboards&lt;br/&gt;Streamlit / Shiny]\n    F[Published slides&lt;br/&gt;Quarto revealjs]\n    G[Version-controlled&lt;br/&gt;Git / GitHub]\n  end\n  A --&gt; B\n  B &lt;--&gt; C\n  C &lt;--&gt; D\n  B --&gt; E\n  B --&gt; F\n  B --&gt; G"
+  },
+  {
+    "objectID": "slides.html#references",
+    "href": "slides.html#references",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "References",
+    "text": "References\n\n\nAllaire, J. J., Charles Teague, Carlos Scheidegger, Yihui Xie, Christophe Dervieux, and Gordon Woodhull. 2024. Quarto. Released. https://doi.org/10.5281/zenodo.5960048.\n\n\nArribas-Bel, Dani. 2019. “A Course on Geographic Data Science.” Journal of Open Source Education 2 (14): 42. https://doi.org/10.21105/jose.00042.\n\n\nBoeing, Geoff. 2017. “OSMnx: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex Street Networks.” Computers, Environment and Urban Systems 65: 126–39. https://doi.org/10/gbvjxq."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "TDCA — Data Science and AI for Data-Driven Transport Planning",
+    "section": "",
+    "text": "A lecture for Transport Data Collection and Analysis (TDCA) at the Institute for Transport Studies, University of Leeds.\nLast updated: July 6, 2026"
+  },
+  {
+    "objectID": "index.html#about-this-lecture",
+    "href": "index.html#about-this-lecture",
+    "title": "TDCA — Data Science and AI for Data-Driven Transport Planning",
+    "section": "About this lecture",
+    "text": "About this lecture\nThis lecture bridges the gap between traditional data collection and modern data science and AI. It covers:\n\nWhat are Data Science and AI? — definitions, transport applications\nAI for Transport Planning — reproducible environments, AI-powered programming, agentic loops\nWhy Reproducibility Matters — Excel vs. code, transparency in policy\nThe Power of (AI-Powered) Programming — flexibility, scalability, AI as accelerator\nTools of the Trade — Python, R, Quarto, AI coding assistants\nInteractive Visualisations — Streamlit, Plotly, Shiny, PCT\nMaking the Most of Transport Data — data types, AI applications"
+  },
+  {
+    "objectID": "index.html#links",
+    "href": "index.html#links",
+    "title": "TDCA — Data Science and AI for Data-Driven Transport Planning",
+    "section": "Links",
+    "text": "Links\n\nTDS module website: itsleeds.github.io/tds\nTDCA module repository: github.com/itsleeds/tdca\nReproducible project template: github.com/Robinlovelace/reproducible-project-template\nGeocomputation with R: r.geocompx.org\nR for Data Science: r4ds.hadley.nz"
+  }
+]
