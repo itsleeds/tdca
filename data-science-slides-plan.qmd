@@ -13,18 +13,31 @@ bibliography: tds.bib
 
 ## Introduction
 
-- This lecture bridges the gap between traditional data collection and modern data science.
+- This lecture bridges the gap between traditional data collection and modern data science **and AI**.
 - We move from static Excel-based analysis to dynamic, reproducible workflows.
-- Connection to Semester 2: **Transport Data Science (TDS)**.
-- Goal: Empower you with the tools of the future.
+- **AI is reshaping transport planning** — but its power is unlocked through reproducible, code-based environments.
+- Goal: Equip you with the foundations to harness both data science and AI in transport.
 
-## What is Data Science?
+## What are Data Science and AI?
 
-> "A discipline that allows you to turn raw data into understanding, insight, and knowledge" [@wickham_data_2023]
+> Data science turns raw data into understanding, insight, and knowledge. AI uses data to make predictions, optimise decisions, and automate reasoning. Together, they form the backbone of modern evidence-based transport planning.
 
-- It is more than just statistics.
-- It involves **programming**, **domain expertise**, and **communication**.
-- In transport, it's about handling "big data" from sensors, GPS, and smart cards [@boeing_osmnx_2017].
+- **Data science**: extracting insights from structured and unstructured transport data.
+- **AI / Machine Learning**: pattern recognition, prediction, and optimisation — from traffic forecasting to demand modelling.
+- In transport, this means handling sensor streams, GPS traces, smart card records, and more [@boeing_osmnx_2017].
+- Both disciplines demand **reproducibility** and **code literacy** to be effective.
+
+## AI for Transport Planning
+
+- AI is transforming transport: real-time traffic prediction, demand-responsive transit, safety analysis, autonomous vehicles.
+- **But AI without reproducibility is a black box** — results that can't be re-run can't be trusted.
+- **Reproducible data science environments** (Python/R scripts, Quarto documents, version-controlled pipelines) are the best way to integrate AI because:
+
+> **AI-powered programming**: AI coding assistants (e.g. GitHub Copilot, Codex) help write, debug, and explain code — lowering barriers and accelerating analysis.
+
+> **Agentic loops**: an AI agent can be asked to keep iterating on a task — refining a model, tuning a parameter, improving a visualisation — until a satisfactory result is generated, all within a reproducible script.
+
+- The key insight: AI works best when the environment is **defined in code**, so every iteration is captured, auditable, and repeatable.
 
 ## Why Reproducibility Matters
 
@@ -32,22 +45,25 @@ bibliography: tds.bib
 - **Excel vs. Code:**
   - Excel: Steps are often hidden in clicks; hard to audit.
   - Code: Every step is documented and repeatable.
-- **Transparency:** Crucial for public policy and planning.
+- **AI + Reproducibility:** AI-assisted code generation can help write reproducible pipelines faster, but the pipeline itself must remain **transparent and scripted**.
+- **Transparency:** Crucial for public policy and planning — AI decisions in transport affect people's lives.
 
-## The Power of Programming
+## The Power of (AI-Powered) Programming
 
 - **Flexibility:** You are not limited by what a menu option allows.
 - **Scalability:** The same code can process 10 rows or 10 million rows.
 - **Sharing:** Open-source libraries mean you stand on the shoulders of giants.
 - **Automation:** Spend more time thinking, less time copy-pasting.
+- **AI as accelerator:** AI assistants can generate boilerplate, explain errors, and suggest improvements — but understanding the code you run is still essential.
+- **Acknowledge the learning curve:** Programming has a steeper start than point-and-click tools. Python tutorials in the module are designed to support you — no prior experience expected.
 
 ## Tools of the Trade
 
-- **Python:** A first-class citizen in data science. Versatile and powerful.
+- **Python:** A first-class citizen in data science and AI. Versatile and powerful.
 - **R:** Excellent for statistics and spatial analysis [@arribas-bel_course_2019].
-- **Quarto:** The multi-language successor to R Markdown.
-  - Mixes code, text, and output.
-  - Renders to PDF, HTML, Word, and slides! [@allaire_quarto_2024]
+- **Quarto:** The multi-language publishing tool — mixes code, text, and output; renders to slides, PDF, HTML [@allaire_quarto_2024].
+- **AI coding assistants:** Tools like GitHub Copilot work directly in your editor, helping you write, understand, and debug code faster.
+- **The ecosystem:** These tools combine — Python/R for analysis, Quarto for communication, AI assistants for productivity.
 
 ## Interactive Visualisations
 
@@ -58,10 +74,15 @@ bibliography: tds.bib
   - Interactive road safety maps.
 - *Increases the transparency and reach of research.*
 
-## From TDCA to TDS
+## Making the Most of Transport Data
 
-- This module (TDCA) builds the foundation.
-- Semester 2 (TDS) takes it to the next level.
-- Learning Python/Quarto now gives you a head start.
+- Transport data comes in many forms: smart card taps, GPS trajectories, traffic counts, crowd-sourced feeds.
+- The value is not in the data itself but in **what you do with it**:
+  - Cleaning and validating raw data.
+  - Visualising patterns and anomalies.
+  - Building models to predict and optimise.
+- **AI can help**: anomaly detection in sensor streams, clustering travel patterns, predicting demand.
+- This module (TDCA) builds the foundation for working with transport data **by hand and with code**.
+- Subsequent modules build on this — the skills you learn here apply across the programme.
 
 ## References
