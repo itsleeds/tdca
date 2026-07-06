@@ -9,58 +9,56 @@ bibliography: references.bib
 
 ## Introduction
 
-- This lecture bridges the gap between traditional data collection and modern data science **and AI**.
-- We move from static Excel-based analysis to dynamic, reproducible workflows.
-- **AI is reshaping transport planning** — but its power is unlocked through reproducible, code-based environments.
-- Goal: Equip you with the foundations to harness both data science and AI in transport.
+- Context: new digital tools for transport planning
+- **Reproducible data science** -> impact
+- **Reproducible data science** -> effectively integrate **AI** into your work
+- Excel-based analysis -> dynamic, reproducible, scalable workflows
+- **AI has potential to reshape every sector and organisation** 
+  - Potential only realised by people using reproducible workflows
+- Goal: explain what this means and how to get started in this space
 
 ## What are Data Science and AI?
 
-> Data science turns raw data into understanding, insight, and knowledge. AI uses data to make predictions, optimise decisions, and automate reasoning. Together, they form the backbone of modern evidence-based transport planning.
+> Data science: turns raw data into understanding and insight
 
-- **Data science**: extracting insights from structured and unstructured transport data.
-- **AI / Machine Learning**: pattern recognition, prediction, and optimisation — from traffic forecasting to demand modelling.
-- In transport, this means handling sensor streams, GPS traces, smart card records, and more [@boeing_osmnx_2017].
-- Both disciplines demand **reproducibility** and **code literacy** to be effective.
+> AI: generative language models to generate code and other outputs for decision-making.
+
+- **Machine Learning**: pattern recognition, prediction, and optimisation: from traffic forecasting to demand modelling.
+- In transport, this means handling a wide range of data sources including datasets on transport infrastructure, behaviour and more
+  - There's more data than ever before
+  - Example: OpenStreetMap data which is available worldwide [@boeing_osmnx_2017].
 
 ## AI for Transport Planning
 
-::::: columns
-::: {.column width="50%"}
+- AI is transforming transport (e.g., traffic prediction, safety analysis), but its value is unlocked only when integrated into reproducible workflows.
+- **Why reproducible environments are the best way to leverage AI**:
 
-- AI is transforming transport: real-time traffic prediction, demand-responsive transit, safety analysis, autonomous vehicles.
-- **But AI without reproducibility is a black box** — results that can't be re-run can't be trusted.
-- **Reproducible data science environments** (Python/R scripts, Quarto documents, version-controlled pipelines) are the best way to integrate AI because:
-
-:::
-::: {.column width="50%"}
-
-> **AI-powered programming**: AI coding assistants (e.g. GitHub Copilot, Codex) help write, debug, and explain code — lowering barriers and accelerating analysis.
-
-> **Agentic loops**: an AI agent can be asked to keep iterating on a task — refining a model, tuning a parameter, improving a visualisation — until a satisfactory result is generated, all within a reproducible script.
-
-:::
-:::::
+| Key Advantage | How Reproducibility Enables This | Impact on AI & Planning |
+|---|---|---|
+| **Auditability & Trust** | Version control (Git) logs every step, dataset, and random seed. | Prevents black-box results; ensures public policy decisions are auditable. |
+| **AI-Assisted Coding** | Workflows are text-based scripts (Python/R) rather than hidden GUI menus. | AI assistants can directly write, debug, and explain code in your editor. |
+| **Agentic Loops** | Execution pipelines are programmatic, automated, and self-contained. | AI agents can run automated loops to optimize parameters and test models. |
+| **Robust Stability** | Package managers (Conda/Pip) pin dependencies and library versions. | Combats the non-deterministic nature of AI to ensure consistent results. |
 
 - The key insight: AI works best when the environment is **defined in code**, so every iteration is captured, auditable, and repeatable.
 
 ## Why Reproducibility Matters
 
-- **Reproducibility:** Others (or future you) can run your code and get the same results.
+- **Reproducibility:** Others (or future you) can run your code and get the exact same results.
 - **Excel vs. Code:**
-  - Excel: Steps are often hidden in clicks; hard to audit.
-  - Code: Every step is documented and repeatable.
-- **AI + Reproducibility:** AI-assisted code generation can help write reproducible pipelines faster, but the pipeline itself must remain **transparent and scripted**.
-- **Transparency:** Crucial for public policy and planning — AI decisions in transport affect people's lives.
+  - *Excel:* Steps are hidden behind point-and-click menus; difficult to audit, version, or scale.
+  - *Code:* Every transformation is explicitly documented, version-controlled, and repeatable.
+- **AI + Reproducibility:** AI assistants help write reproducible pipelines faster, but the pipeline must remain **transparent and scripted** to be verified.
+- **Transparency:** Crucial for public policy and planning — AI-driven decisions in transport affect people's lives.
 
 ## The Power of (AI-Powered) Programming
 
-- **Flexibility:** You are not limited by what a menu option allows.
-- **Scalability:** The same code can process 10 rows or 10 million rows.
-- **Sharing:** Open-source libraries mean you stand on the shoulders of giants.
-- **Automation:** Spend more time thinking, less time copy-pasting.
-- **AI as accelerator:** AI assistants can generate boilerplate, explain errors, and suggest improvements — but understanding the code you run is still essential.
-- **Acknowledge the learning curve:** Programming has a steeper start than point-and-click tools. Python tutorials in the module are designed to support you — no prior experience expected.
+- **Flexibility:** You are not limited by what a GUI dropdown menu allows.
+- **Scalability:** The same script can process 10 rows or 10 million rows.
+- **Sharing & Collaboration:** Open-source packages mean you stand on the shoulders of giants.
+- **Automation:** Spend more time thinking and designing solutions, less time copy-pasting.
+- **AI as an Accelerator:** Assistants generate boilerplate and explain errors, but understanding the code you run is still essential.
+- **The Learning Curve:** Programming has a steeper start than point-and-click tools. The Python tutorials in this module are designed to guide you step-by-step.
 
 ## Tools of the Trade
 
@@ -104,15 +102,13 @@ bibliography: references.bib
 
 ## Making the Most of Transport Data
 
-- Transport data comes in many forms: smart card taps, GPS trajectories, traffic counts, crowd-sourced feeds.
-- The value is not in the data itself but in **what you do with it**:
-  - Cleaning and validating raw data.
-  - Visualising patterns and anomalies.
-  - Building models to predict and optimise.
-- **AI can help**: anomaly detection in sensor streams, clustering travel patterns, predicting demand.
-- This module (TDCA) builds the foundation for working with transport data **by hand and with code**.
-- Subsequent modules build on this — the skills you learn here apply across the programme.
-- **Next:** [Transport Data Science (TDS)](https://itsleeds.github.io/tds/) takes this further with routing, web APIs, and machine learning.
+- **Diverse Data Sources:** Smart card taps, GPS trajectories, traffic counts, and crowd-sourced feeds.
+- **Where the value lies:** Not in raw datasets, but in your processing pipeline:
+  - **Clean & Validate:** Handling missing values, sensor failures, and anomalies.
+  - **Visualise:** Exposing spatial patterns, bottlenecks, and travel trends.
+  - **Model:** Predicting demand and optimizing traffic flow.
+- **How AI Enhances This:** Automating anomaly detection, clustering travel patterns, and forecasting future demand.
+- **Foundation for the Future:** TDCA builds the core skills for working with transport data. These scale directly into next modules like [Transport Data Science (TDS)](https://itsleeds.github.io/tds/).
 
 ## Reproducible Workflow with AI
 
