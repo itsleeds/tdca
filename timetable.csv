@@ -1,0 +1,36 @@
+module_code,datetime,duration,activity,activity_type,location,staff,notes
+TRAN5032M01,2026-10-01 13:00,1,TRAN5032M01/LEC 1/01 <08>,Lecture,Liberty Building LT (LG.06),"Yang,Yuanxuan,Dr, Calastri,Chiara,Dr, Watling,David,Prof",
+TRAN5032M01,2026-10-08 13:00,2,TRAN5032M01/LEC 4/01,Lecture,Chemical and Process Engineering LT B (1.06),"Calastri,Chiara,Dr",
+TRAN5032M01,2026-10-08 15:00,2,TRAN5032M01/LEC 3/01,Lecture,Chemical and Process Engineering LT B (1.06),"Watling,David,Prof",
+TRAN5032M01,2026-10-14 09:00,1,TRAN5032M01/PRC 1/01,Practical,Psychology Cluster (1.45),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-10-15 11:00,1,TRAN5032M01/PRC 1/02 <10>,Practical,Clarendon Building Cluster (GR.04),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-10-15 15:00,2,TRAN5032M01/LEC 3/01,Lecture,Chemical and Process Engineering LT B (1.06),"Watling,David,Prof",
+TRAN5032M01,2026-10-16 11:00,1,TRAN5032M01/LEC 2/01 <10>,Lecture,Clothworkers Court Speakman LT (G.89),"Yang,Yuanxuan,Dr",
+TRAN5032M01,2026-10-16 13:00,1,TRAN5032M01/LEC 1/01 <10>,Lecture,Liberty Building LT (LG.06),"Yang,Yuanxuan,Dr",
+TRAN5032M01,2026-10-21 09:00,1,TRAN5032M01/PRC 1/01,Practical,Psychology Cluster (1.45),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-10-21 12:00,1,"TRAN5032M01/PRC 1/02 <11, 13-16>",Practical,Chemical and Process Engineering Cluster (GR.06),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-10-22 13:00,1,TRAN5032M01/LEC 1/01 <11>,Lecture,Liberty Building LT (LG.06),"Tate,James,Dr",
+TRAN5032M01,2026-10-22 15:00,2.5,TRAN5032M01/WKS 2/01,Workshop,Maurice Keyworth SR (G.31),"Yang,Yuanxuan,Dr",
+TRAN5032M01,2026-10-23 09:00,8,TRAN5032M01/FIELD 1/01,Fieldwork,,"Yang,Yuanxuan,Dr",
+TRAN5032M01,2026-10-29 15:00,2,TRAN5032M01/LEC 3/01,Lecture,Chemical and Process Engineering LT B (1.06),"Watling,David,Prof",
+TRAN5032M01,2026-10-30 09:00,8,TRAN5032M01/FIELD 2/01,Fieldwork,,"Yang,Yuanxuan,Dr",
+TRAN5032M01,2026-11-04 09:00,1,TRAN5032M01/PRC 1/01,Practical,Psychology Cluster (1.45),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-11-04 12:00,1,"TRAN5032M01/PRC 1/02 <11, 13-16>",Practical,Chemical and Process Engineering Cluster (GR.06),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-11-05 13:00,1,TRAN5032M01/LEC 1/01 <13>,Lecture,Liberty Building LT (LG.06),"Philips,Ian,Dr",
+TRAN5032M01,2026-11-05 14:00,1,TRAN5032M01/LEC 2/01 <13>,Lecture,28 University Road LT (G.23),"Yang,Yuanxuan,Dr",
+TRAN5032M01,2026-11-05 15:00,2,TRAN5032M01/LEC 3/01,Lecture,Chemical and Process Engineering LT B (1.06),"Watling,David,Prof",
+TRAN5032M01,2026-11-11 09:00,1,TRAN5032M01/PRC 1/01,Practical,Psychology Cluster (1.45),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-11-11 12:00,1,"TRAN5032M01/PRC 1/02 <11, 13-16>",Practical,Chemical and Process Engineering Cluster (GR.06),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-11-12 13:00,1,TRAN5032M01/LEC 1/01 <14>,Lecture,Liberty Building LT (LG.06),"Calastri,Chiara,Dr",
+TRAN5032M01,2026-11-12 15:00,2,TRAN5032M01/LEC 3/01,Lecture,Chemical and Process Engineering LT B (1.06),"Watling,David,Prof",
+TRAN5032M01,2026-11-18 09:00,1,TRAN5032M01/PRC 1/01,Practical,Psychology Cluster (1.45),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-11-18 12:00,1,"TRAN5032M01/PRC 1/02 <11, 13-16>",Practical,Chemical and Process Engineering Cluster (GR.06),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-11-19 13:00,1,TRAN5032M01/LEC 1/01 <15>,Lecture,Liberty Building LT (LG.06),"Grant-Muller,Susan,Prof",
+TRAN5032M01,2026-11-19 14:00,1,TRAN5032M01/WKS 1/02,Workshop,Baines Wing SR (4.12),"Grant-Muller,Susan,Prof, Tate,James,Dr, Yang,Yuanxuan,Dr",Alternative times
+TRAN5032M01,2026-11-19 14:00,1,TRAN5032M01/WKS 1/03,Workshop,Baines Wing SR (2.37),"Grant-Muller,Susan,Prof, Tate,James,Dr, Yang,Yuanxuan,Dr",Alternative times
+TRAN5032M01,2026-11-19 16:00,1,TRAN5032M01/WKS 1/01,Workshop,Baines Wing SR (2.08),"Yang,Yuanxuan,Dr, Tate,James,Dr, Grant-Muller,Susan,Prof",Alternative times
+TRAN5032M01,2026-11-25 09:00,1,TRAN5032M01/PRC 1/01,Practical,Psychology Cluster (1.45),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-11-25 12:00,1,"TRAN5032M01/PRC 1/02 <11, 13-16>",Practical,Chemical and Process Engineering Cluster (GR.06),"Rushton, Christopher, Dr",Alternative times
+TRAN5032M01,2026-11-26 13:00,1,TRAN5032M01/LEC 1/01 <16>,Lecture,Liberty Building LT (LG.06),"Lovelace,Robin,Prof",
+TRAN5032M01,2026-12-03 13:00,1,TRAN5032M01/LEC 1/01 <17>,Lecture,Liberty Building LT (LG.06),"Calastri,Chiara,Dr",
+TRAN5032M01,2026-12-03 15:00,2,TRAN5032M01/LEC 3/01,Lecture,Chemical and Process Engineering LT B (1.06),"Watling,David,Prof",
