@@ -42,6 +42,84 @@ bibliography: references.bib
 
 - The key insight: AI works best when the environment is **defined in code**, so every iteration is captured, auditable, and repeatable.
 
+## AI in Action: JamCam Lab & Computer Vision
+
+::::: columns
+::: {.column width="55%"}
+
+- Real-world AI project: [JamCam Lab (`tfl_yolo`)](https://github.com/chris-r-uol/tfl_yolo), developed by Dr Christopher Rushton (ITS Leeds).
+
+- Uses YOLO object detection on ~890 live Transport for London (TfL) roadside camera feeds.
+
+- Automated counting and classification of vehicles, cyclists, and pedestrians.
+
+- **Core planning insight:** *"Getting counts out of a traffic camera is easy; getting counts you would defend in public is the whole course."*
+
+- Demonstrates why AI model outputs must be paired with camera calibration, perspective correction, validation, and domain expertise.
+
+:::
+::: {.column width="45%"}
+
+- Direct link to practical teaching in TDCA:
+
+  - Connects computer vision to spatial analysis.
+  - Reproducible pipeline: fetch $\rightarrow$ detect $\rightarrow$ calibrate $\rightarrow$ aggregate $\rightarrow$ validate $\rightarrow$ merge.
+  - Accessible via GitHub Codespaces with zero local installation.
+
+:::
+:::::
+
+## The AI Paradox: Upsides and "AI Surrender"
+
+::::: columns
+::: {.column width="50%"}
+
+### Great Potential Upsides
+
+- **Rapid Prototyping:** Instant generation of boilerplate code, data wrangling pipelines, and plotting syntax.
+
+- **Error Diagnostics:** Fast explanations for obscure stack traces and package dependency errors.
+
+- **Exploratory Breadth:** Quickly learning new libraries (e.g., GeoPandas, Shapely, PyTorch, Quarto).
+
+:::
+::: {.column width="50%"}
+
+### The Risk of "AI Surrender"
+
+- **Cognitive Surrender:** Documented by the [MIT Committee on AI in Education](https://facultygovernance.mit.edu/) [@mit_ai_committee_2026].
+
+- **Loss of Productive Struggle:** Outsourcing cognitive effort at the first sign of difficulty.
+
+- **The "Illusion of Learning":** Getting correct answers quickly creates a false sense of personal mastery without mental encoding.
+
+- **Social Erosion:** Marked drops in study group collaboration and office hour attendance.
+
+:::
+:::::
+
+## Empirical Evidence: Homework vs. Exams
+
+::::: columns
+::: {.column width="45%"}
+
+- **The Generative AI Penalty:** Randomized trial by Bastani et al. [@bastani_generative_2025] in *PNAS*:
+
+  - Homework/practice scores rose **+48%** with standard AI ("GPT Base").
+  - On unassisted exams, those same students scored **17% worse** than students who never used AI!
+
+- **International Evidence (26,000+ students):** Unrestricted AI boosts homework scores (**+18%**) while closed-book exam scores drop (**-20%**).
+
+- **The Remedy:** Guardrails and friction ("GPT Tutor") that prompt thinking rather than providing copy-paste solutions.
+
+:::
+::: {.column width="55%"}
+
+![Impact of generative AI on practice vs. unassisted exam performance and international educational indicators [@bastani_generative_2025; @mit_ai_committee_2026].](images/ai-homework-vs-exams.png){width="100%" fig-alt="Chart comparing AI impact on homework versus unassisted exams"}
+
+:::
+:::::
+
 ## Why Reproducibility Matters
 
 - **Reproducibility:** Others (or future you) can run your code and get the exact same results.
@@ -109,6 +187,31 @@ bibliography: references.bib
   - **Model:** Predicting demand and optimizing traffic flow.
 - **How AI Enhances This:** Automating anomaly detection, clustering travel patterns, and forecasting future demand.
 - **Foundation for the Future:** TDCA builds the core skills for working with transport data. These scale directly into next modules like [Transport Data Science (TDS)](https://itsleeds.github.io/tds/).
+
+## TDCA Timetable (2026–27)
+
+::::: columns
+::: {.column width="42%"}
+
+- **Structured Learning:** Balanced progression through Semester 1 (Oct–Dec 2026).
+
+- **Practicals:** Dr Christopher Rushton (Wednesdays & Thursdays) in computer clusters.
+
+- **Lectures & Workshops:** Thursdays (Liberty Building & Chem Eng) covering survey design, sensor data, and modeling.
+
+- **Fieldwork:** Full-day data collection sessions (Fridays, Weeks 4 & 5).
+
+- **Week 9 Highlight:** *Data Science and AI for Transport Planning* with Prof Robin Lovelace (Thu 26 Nov 2026, 13:00–14:00).
+
+- **Datasets & Portal:** [CSV dataset](timetable.csv) | [Leeds Timetable Portal](https://timetable.leeds.ac.uk/teaching/202627/reporting/Individual?objectclass=module&idtype=name&identifier=TRAN5032M01&template=SWSCUST+module+Individual&days=1-7&weeks=1-52&periods=1-21)
+
+:::
+::: {.column width="58%"}
+
+![TDCA (TRAN5032M) Semester 1 teaching schedule and weekly contact blocks.](images/tdca-timetable-202627.png){width="100%" fig-alt="TDCA module timetable schedule visualization"}
+
+:::
+:::::
 
 ## Reproducible Workflow with AI
 
