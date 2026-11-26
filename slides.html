@@ -6,25 +6,28 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
 
   <meta name="author" content="Robin Lovelace Online version: itsleeds.github.io/tdca Source: github.com/itsleeds/tdca">
-  <meta name="dcterms.date" content="2026-07-06">
+  <meta name="dcterms.date" content="2026-11-26">
   <title>Data Science and AI for Data-Driven Transport Planning</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -52,7 +55,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-b2736e9fcda83c748fd63b6e579550ef.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-7ad92b9edfb8c06a94474e9745014179.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -160,12 +163,12 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="https://itsleeds.github.io/tdca/slides.html">itsleeds.github.io/tdca</a></span><br><span style="font-size:0.7em">Source: <a href="https://github.com/itsleeds/tdca">github.com/itsleeds/tdca</a></span> 
+Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="https://itsleeds.github.io/tdca/slides.html">itsleeds.github.io/tdca</a></span><br><span style="font-size:0.7em">Source: <a href="https://github.com/itsleeds/tdca">github.com/itsleeds/tdca</a></span>
 </div>
 </div>
 </div>
 
-  <p class="date">July 6, 2026</p>
+  <p class="date">November 26, 2026</p>
 </section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
@@ -243,6 +246,70 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <ul>
 <li>The key insight: AI works best when the environment is <strong>defined in code</strong>, so every iteration is captured, auditable, and repeatable.</li>
 </ul>
+</section>
+<section id="ai-in-action-jamcam-lab-computer-vision" class="slide level2">
+<h2>AI in Action: JamCam Lab &amp; Computer Vision</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><p>Real-world AI project: <a href="https://github.com/chris-r-uol/tfl_yolo">JamCam Lab (<code>tfl_yolo</code>)</a>, developed by Dr Christopher Rushton (ITS Leeds).</p></li>
+<li><p>Uses YOLO object detection on ~890 live Transport for London (TfL) roadside camera feeds.</p></li>
+<li><p>Automated counting and classification of vehicles, cyclists, and pedestrians.</p></li>
+<li><p><strong>Core planning insight:</strong> <em>“Getting counts out of a traffic camera is easy; getting counts you would defend in public is the whole course.”</em></p></li>
+<li><p>Demonstrates why AI model outputs must be paired with camera calibration, perspective correction, validation, and domain expertise.</p></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<ul>
+<li><p>Direct link to practical teaching in TDCA:</p>
+<ul>
+<li>Connects computer vision to spatial analysis.</li>
+<li>Reproducible pipeline: fetch <span class="math inline">\(\rightarrow\)</span> detect <span class="math inline">\(\rightarrow\)</span> calibrate <span class="math inline">\(\rightarrow\)</span> aggregate <span class="math inline">\(\rightarrow\)</span> validate <span class="math inline">\(\rightarrow\)</span> merge.</li>
+<li>Accessible via GitHub Codespaces with zero local installation.</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="the-ai-paradox-upsides-and-ai-surrender" class="slide level2">
+<h2>The AI Paradox: Upsides and “AI Surrender”</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="great-potential-upsides">Great Potential Upsides</h3>
+<ul>
+<li><p><strong>Rapid Prototyping:</strong> Instant generation of boilerplate code, data wrangling pipelines, and plotting syntax.</p></li>
+<li><p><strong>Error Diagnostics:</strong> Fast explanations for obscure stack traces and package dependency errors.</p></li>
+<li><p><strong>Exploratory Breadth:</strong> Quickly learning new libraries (e.g., GeoPandas, Shapely, PyTorch, Quarto).</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="the-risk-of-ai-surrender">The Risk of “AI Surrender”</h3>
+<ul>
+<li><p><strong>Cognitive Surrender:</strong> Documented by the <a href="https://facultygovernance.mit.edu/">MIT Committee on AI in Education</a> <span class="citation" data-cites="mit_ai_committee_2026">(<a href="#/references" role="doc-biblioref" onclick="">MIT Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training 2026</a>)</span>.</p></li>
+<li><p><strong>Loss of Productive Struggle:</strong> Outsourcing cognitive effort at the first sign of difficulty.</p></li>
+<li><p><strong>The “Illusion of Learning”:</strong> Getting correct answers quickly creates a false sense of personal mastery without mental encoding.</p></li>
+<li><p><strong>Social Erosion:</strong> Marked drops in study group collaboration and office hour attendance.</p></li>
+</ul>
+</div></div>
+</section>
+<section id="empirical-evidence-homework-vs.-exams" class="slide level2">
+<h2>Empirical Evidence: Homework vs.&nbsp;Exams</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li><p><strong>The Generative AI Penalty:</strong> Randomized trial by Bastani et al. <span class="citation" data-cites="bastani_generative_2025">(<a href="#/references" role="doc-biblioref" onclick="">Bastani et al. 2025</a>)</span> in <em>PNAS</em>:</p>
+<ul>
+<li>Homework/practice scores rose <strong>+48%</strong> with standard AI (“GPT Base”).</li>
+<li>On unassisted exams, those same students scored <strong>17% worse</strong> than students who never used AI!</li>
+</ul></li>
+<li><p><strong>International Evidence (26,000+ students):</strong> Unrestricted AI boosts homework scores (<strong>+18%</strong>) while closed-book exam scores drop (<strong>-20%</strong>).</p></li>
+<li><p><strong>The Remedy:</strong> Guardrails and friction (“GPT Tutor”) that prompt thinking rather than providing copy-paste solutions.</p></li>
+</ul>
+</div><div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ai-homework-vs-exams.png" style="width:100.0%" alt="Chart comparing AI impact on homework versus unassisted exams"></p>
+<figcaption>Impact of generative AI on practice vs.&nbsp;unassisted exam performance and international educational indicators <span class="citation" data-cites="bastani_generative_2025 mit_ai_committee_2026">(<a href="#/references" role="doc-biblioref" onclick="">Bastani et al. 2025</a>; <a href="#/references" role="doc-biblioref" onclick="">MIT Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training 2026</a>)</span>.</figcaption>
+</figure>
+</div>
+</div></div>
 </section>
 <section id="why-reproducibility-matters" class="slide level2">
 <h2>Why Reproducibility Matters</h2>
@@ -327,6 +394,27 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <li><strong>Foundation for the Future:</strong> TDCA builds the core skills for working with transport data. These scale directly into next modules like <a href="https://itsleeds.github.io/tds/">Transport Data Science (TDS)</a>.</li>
 </ul>
 </section>
+<section id="tdca-timetable-202627" class="slide level2">
+<h2>TDCA Timetable (2026–27)</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<ul>
+<li><p><strong>Structured Learning:</strong> Balanced progression through Semester 1 (Oct–Dec 2026).</p></li>
+<li><p><strong>Practicals:</strong> Dr Christopher Rushton (Wednesdays &amp; Thursdays) in computer clusters.</p></li>
+<li><p><strong>Lectures &amp; Workshops:</strong> Thursdays (Liberty Building &amp; Chem Eng) covering survey design, sensor data, and modeling.</p></li>
+<li><p><strong>Fieldwork:</strong> Full-day data collection sessions (Fridays, Weeks 4 &amp; 5).</p></li>
+<li><p><strong>Week 9 Highlight:</strong> <em>Data Science and AI for Transport Planning</em> with Prof Robin Lovelace (Thu 26 Nov 2026, 13:00–14:00).</p></li>
+<li><p><strong>Datasets &amp; Portal:</strong> <a href="timetable.csv">CSV dataset</a> | <a href="https://timetable.leeds.ac.uk/teaching/202627/reporting/Individual?objectclass=module&amp;idtype=name&amp;identifier=TRAN5032M01&amp;template=SWSCUST+module+Individual&amp;days=1-7&amp;weeks=1-52&amp;periods=1-21">Leeds Timetable Portal</a></p></li>
+</ul>
+</div><div class="column" style="width:58%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/tdca-timetable-202627.png" style="width:100.0%" alt="TDCA module timetable schedule visualization"></p>
+<figcaption>TDCA (TRAN5032M) Semester 1 teaching schedule and weekly contact blocks.</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
 <section id="reproducible-workflow-with-ai" class="slide level2">
 <h2>Reproducible Workflow with AI</h2>
 <div class="cell" data-reveal="true" data-layout-align="default">
@@ -334,6 +422,7 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <div>
 <p></p><figure class=""><p></p>
 <div>
+
 <pre class="mermaid mermaid-js">flowchart LR
   subgraph Source["Source"]
     A[Raw transport data&lt;br/&gt;sensors, GPS, smart cards]
@@ -370,8 +459,14 @@ Allaire, J. J., Charles Teague, Carlos Scheidegger, Yihui Xie, Christophe Dervie
 <div id="ref-arribas-bel_course_2019" class="csl-entry" role="listitem">
 Arribas-Bel, Dani. 2019. <span>“A Course on Geographic Data Science.”</span> <em>Journal of Open Source Education</em> 2 (14): 42. <a href="https://doi.org/10.21105/jose.00042">https://doi.org/10.21105/jose.00042</a>.
 </div>
+<div id="ref-bastani_generative_2025" class="csl-entry" role="listitem">
+Bastani, Hamsa, Osbert Bastani, Alp Sungu, Haosen Ge, Özge Kabakcı, and Rei Mariman. 2025. <span>“Generative <span>AI</span> Without Guardrails Can Harm Learning: Evidence from High School Mathematics.”</span> <em>Proceedings of the National Academy of Sciences</em> 122 (26): e2422633122. <a href="https://doi.org/10.1073/pnas.2422633122">https://doi.org/10.1073/pnas.2422633122</a>.
+</div>
 <div id="ref-boeing_osmnx_2017" class="csl-entry" role="listitem">
 Boeing, Geoff. 2017. <span>“<span>OSMnx</span>: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex Street Networks.”</span> <em>Computers, Environment and Urban Systems</em> 65: 126–39. <a href="https://doi.org/10/gbvjxq">https://doi.org/10/gbvjxq</a>.
+</div>
+<div id="ref-mit_ai_committee_2026" class="csl-entry" role="listitem">
+MIT Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training. 2026. <em>Report of <span class="nocase">MIT’s</span> Ad Hoc Committee on <span>AI</span> Use in Teaching, Learning, and Research Training</em>. Massachusetts Institute of Technology. <a href="https://facultygovernance.mit.edu/">https://facultygovernance.mit.edu/</a>.
 </div>
 </div>
 
@@ -412,7 +507,7 @@ Boeing, Geoff. 2017. <span>“<span>OSMnx</span>: New Methods for Acquiring, Con
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -667,7 +762,8 @@ Boeing, Geoff. 2017. <span>“<span>OSMnx</span>: New Methods for Acquiring, Con
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -676,8 +772,69 @@ Boeing, Geoff. 2017. <span>“<span>OSMnx</span>: New Methods for Acquiring, Con
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -691,6 +848,7 @@ Boeing, Geoff. 2017. <span>“<span>OSMnx</span>: New Methods for Acquiring, Con
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;
