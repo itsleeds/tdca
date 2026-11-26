@@ -1,7 +1,14 @@
 ---
 title: "Data Science and AI for Data-Driven Transport Planning"
 subtitle: "Transport Data Collection and Analysis (TDCA)"
-format: clean-revealjs
+format:
+  clean-revealjs:
+    width: 1280
+    height: 720
+    margin: 0.08
+    css: slides.css
+    pdf-max-pages-per-slide: 1
+    pdf-separate-fragments: false
 author: "Robin Lovelace<br><br><span style='font-size:0.7em'>Online version: <a href='https://itsleeds.github.io/tdca/slides.html'>itsleeds.github.io/tdca</a></span><br><span style='font-size:0.7em'>Source: <a href='https://github.com/itsleeds/tdca'>github.com/itsleeds/tdca</a></span>"
 date: last-modified
 bibliography: references.bib
@@ -10,110 +17,109 @@ bibliography: references.bib
 ## Introduction
 
 - Context: new digital tools for transport planning
-- **Reproducible data science** -> impact
-- **Reproducible data science** -> effectively integrate **AI** into your work
-- Excel-based analysis -> dynamic, reproducible, scalable workflows
-- **AI has potential to reshape every sector and organisation** 
+- **Reproducible data science** → impact
+- **Reproducible data science** → effectively integrate **AI** into your work
+- Excel-based analysis → dynamic, reproducible, scalable workflows
+- **AI has potential to reshape every sector and organisation**
   - Potential only realised by people using reproducible workflows
 - Goal: explain what this means and how to get started in this space
 
 ## What are Data Science and AI?
 
-> Data science: turns raw data into understanding and insight
+> **Data science:** turns raw data into understanding and insight.
 
-> AI: generative language models to generate code and other outputs for decision-making.
+> **AI:** generative language models to generate code and other outputs for decision-making.
 
-- **Machine Learning**: pattern recognition, prediction, and optimisation: from traffic forecasting to demand modelling.
-- In transport, this means handling a wide range of data sources including datasets on transport infrastructure, behaviour and more
-  - There's more data than ever before
-  - Example: OpenStreetMap data which is available worldwide [@boeing_osmnx_2017].
+- **Machine Learning:** pattern recognition, prediction, and optimisation — from traffic forecasting to demand modelling.
+- In transport, this means handling diverse data sources on transport infrastructure, behaviour, and flows:
+  - There is more data than ever before.
+  - Example: OpenStreetMap data available worldwide [@boeing_osmnx_2017].
 
-## AI for Transport Planning
+## AI for Transport Planning {.smaller}
 
-- AI is transforming transport (e.g., traffic prediction, safety analysis), but its value is unlocked only when integrated into reproducible workflows.
-- **Why reproducible environments are the best way to leverage AI**:
+- AI is transforming transport (traffic prediction, safety analysis), but value is unlocked only through **reproducible workflows**.
 
 | Key Advantage | How Reproducibility Enables This | Impact on AI & Planning |
 |---|---|---|
 | **Auditability & Trust** | Version control (Git) logs every step, dataset, and random seed. | Prevents black-box results; ensures public policy decisions are auditable. |
 | **AI-Assisted Coding** | Workflows are text-based scripts (Python/R) rather than hidden GUI menus. | AI assistants can directly write, debug, and explain code in your editor. |
-| **Agentic Loops** | Execution pipelines are programmatic, automated, and self-contained. | AI agents can run automated loops to optimize parameters and test models. |
+| **Agentic Loops** | Execution pipelines are programmatic, automated, and self-contained. | AI agents can run automated loops to optimise parameters and test models. |
 | **Robust Stability** | Package managers (Conda/Pip) pin dependencies and library versions. | Combats the non-deterministic nature of AI to ensure consistent results. |
 
-- The key insight: AI works best when the environment is **defined in code**, so every iteration is captured, auditable, and repeatable.
+::: {.takeaway-box}
+**Key insight:** AI works best when the environment is **defined in code**, so every iteration is captured, auditable, and repeatable.
+:::
 
-## AI in Action: JamCam Lab & Computer Vision
+## AI in Action: JamCam Lab & Computer Vision {.smaller}
 
 ::::: columns
-::: {.column width="55%"}
+::: {.column width="54%"}
 
 - Real-world AI project: [JamCam Lab (`tfl_yolo`)](https://github.com/chris-r-uol/tfl_yolo), developed by Dr Christopher Rushton (ITS Leeds).
-
 - Uses YOLO object detection on ~890 live Transport for London (TfL) roadside camera feeds.
-
 - Automated counting and classification of vehicles, cyclists, and pedestrians.
+- Demonstrates why AI outputs must be paired with camera calibration, perspective correction, validation, and domain expertise.
 
-- **Core planning insight:** *"Getting counts out of a traffic camera is easy; getting counts you would defend in public is the whole course."*
-
-- Demonstrates why AI model outputs must be paired with camera calibration, perspective correction, validation, and domain expertise.
+::: {.takeaway-box}
+**Core planning insight:** *"Getting counts out of a traffic camera is easy; getting counts you would defend in public is the whole course."*
+:::
 
 :::
-::: {.column width="45%"}
+::: {.column width="46%"}
 
-- Direct link to practical teaching in TDCA:
+::: {.card-panel}
+[Direct Link to TDCA Practicals]{.card-title}
 
-  - Connects computer vision to spatial analysis.
-  - Reproducible pipeline: fetch $\rightarrow$ detect $\rightarrow$ calibrate $\rightarrow$ aggregate $\rightarrow$ validate $\rightarrow$ merge.
-  - Accessible via GitHub Codespaces with zero local installation.
+- Connects computer vision to spatial transport analysis.
+- Reproducible pipeline:
+  `fetch` → `detect` → `calibrate` → `aggregate` → `validate` → `merge`.
+- Accessible via **GitHub Codespaces** with zero local installation.
+:::
 
 :::
 :::::
 
-## The AI Paradox: Upsides and "AI Surrender"
+## The AI Paradox: Upsides and "AI Surrender" {.smaller}
 
 ::::: columns
 ::: {.column width="50%"}
 
-### Great Potential Upsides
+::: {.card-panel}
+[Great Potential Upsides]{.card-title}
 
 - **Rapid Prototyping:** Instant generation of boilerplate code, data wrangling pipelines, and plotting syntax.
-
 - **Error Diagnostics:** Fast explanations for obscure stack traces and package dependency errors.
-
 - **Exploratory Breadth:** Quickly learning new libraries (e.g., GeoPandas, Shapely, PyTorch, Quarto).
+:::
 
 :::
 ::: {.column width="50%"}
 
-### The Risk of "AI Surrender"
+::: {.card-panel .card-warn}
+[The Risk of "AI Surrender"]{.card-title}
 
-- **Cognitive Surrender:** Documented by the [MIT Committee on AI in Education](https://facultygovernance.mit.edu/) [@mit_ai_committee_2026].
-
+- **Cognitive Surrender:** Documented by the [MIT Committee on AI in Education](https://facultygovernance.mit.edu/) [-@mit_ai_committee_2026].
 - **Loss of Productive Struggle:** Outsourcing cognitive effort at the first sign of difficulty.
-
-- **The "Illusion of Learning":** Getting correct answers quickly creates a false sense of personal mastery without mental encoding.
-
+- **The "Illusion of Learning":** Fast correct answers create a false sense of mastery without mental encoding.
 - **Social Erosion:** Marked drops in study group collaboration and office hour attendance.
+:::
 
 :::
 :::::
 
-## Empirical Evidence: Homework vs. Exams
+## Empirical Evidence: Homework vs. Exams {.compact}
 
 ::::: columns
-::: {.column width="45%"}
+::: {.column width="42%"}
 
-- **The Generative AI Penalty:** Randomized trial by Bastani et al. [@bastani_generative_2025] in *PNAS*:
-
-  - Homework/practice scores rose **+48%** with standard AI ("GPT Base").
-  - On unassisted exams, those same students scored **17% worse** than students who never used AI!
-
-- **International Evidence (26,000+ students):** Unrestricted AI boosts homework scores (**+18%**) while closed-book exam scores drop (**-20%**).
-
-- **The Remedy:** Guardrails and friction ("GPT Tutor") that prompt thinking rather than providing copy-paste solutions.
+- **The Generative AI Penalty:** Randomised trial by @bastani_generative_2025 in *PNAS*:
+  - Practice scores rose **+48%** with standard AI ("GPT Base").
+  - On unassisted exams, those same students scored **17% worse** than students who never used AI.
+- **International Evidence (26,000+ students):** Unrestricted AI boosts homework (**+18%**) while closed-book exam scores drop (**−20%**).
+- **The Remedy:** Guardrails and friction ("GPT Tutor") that prompt thinking rather than copy-paste solutions.
 
 :::
-::: {.column width="55%"}
+::: {.column width="58%"}
 
 ![Impact of generative AI on practice vs. unassisted exam performance and international educational indicators [@bastani_generative_2025; @mit_ai_committee_2026].](images/ai-homework-vs-exams.png){width="100%" fig-alt="Chart comparing AI impact on homework versus unassisted exams"}
 
@@ -136,24 +142,24 @@ bibliography: references.bib
 - **Sharing & Collaboration:** Open-source packages mean you stand on the shoulders of giants.
 - **Automation:** Spend more time thinking and designing solutions, less time copy-pasting.
 - **AI as an Accelerator:** Assistants generate boilerplate and explain errors, but understanding the code you run is still essential.
-- **The Learning Curve:** Programming has a steeper start than point-and-click tools. The Python tutorials in this module are designed to guide you step-by-step.
+- **The Learning Curve:** Programming has a steeper start than point-and-click tools. The Python tutorials in this module guide you step-by-step.
 
 ## Tools of the Trade
 
 ::::: columns
-::: {.column width="50%"}
+::: {.column width="48%"}
 
 - **Python:** A first-class citizen in data science and AI. Versatile and powerful.
 - **R:** Excellent for statistics and spatial analysis [@arribas-bel_course_2019].
 - **Quarto:** The multi-language publishing tool — mixes code, text, and output; renders to slides, PDF, HTML [@allaire_quarto_2024].
 
 :::
-::: {.column width="50%"}
+::: {.column width="52%"}
 
 - **AI coding assistants:** Tools like GitHub Copilot work directly in your editor, helping you write, understand, and debug code faster.
-- **The ecosystem:** These tools combine — Python/R for analysis, Quarto for communication, AI assistants for productivity.
+- **The ecosystem:** Python/R for analysis, Quarto for communication, AI assistants for productivity.
 
-![Reproducible data science ecosystem](images/Mobile-Tartu-Wallpaper-Image-For-Quarto-Presentation.png){width="80%" fig-alt="Reproducible data science environment"}
+![Reproducible data science ecosystem](images/Mobile-Tartu-Wallpaper-Image-For-Quarto-Presentation.png){width="82%" fig-alt="Reproducible data science environment"}
 
 :::
 :::::
@@ -161,17 +167,17 @@ bibliography: references.bib
 ## Interactive Visualisations
 
 ::::: columns
-::: {.column width="50%"}
+::: {.column width="46%"}
 
 - Made possible with code (e.g., Python's `Streamlit`, `Plotly`, or R's `Shiny`).
 - **Impact:** Stakeholders can "play" with the data.
-- Examples: 
+- Examples:
   - Propensity to Cycle Tool (PCT)
   - Interactive road safety maps.
 - *Increases the transparency and reach of research.*
 
 :::
-::: {.column width="50%"}
+::: {.column width="54%"}
 
 ![OD flow map example from Pamplona dataset](images/Flowmap-Blue-Of-Pamplona-OD-Flows.png){width="100%" fig-alt="Interactive flow map showing origin-destination data"}
 
@@ -184,26 +190,21 @@ bibliography: references.bib
 - **Where the value lies:** Not in raw datasets, but in your processing pipeline:
   - **Clean & Validate:** Handling missing values, sensor failures, and anomalies.
   - **Visualise:** Exposing spatial patterns, bottlenecks, and travel trends.
-  - **Model:** Predicting demand and optimizing traffic flow.
+  - **Model:** Predicting demand and optimising traffic flow.
 - **How AI Enhances This:** Automating anomaly detection, clustering travel patterns, and forecasting future demand.
-- **Foundation for the Future:** TDCA builds the core skills for working with transport data. These scale directly into next modules like [Transport Data Science (TDS)](https://itsleeds.github.io/tds/).
+- **Foundation for the Future:** TDCA builds the core skills for working with transport data — scaling directly into [Transport Data Science (TDS)](https://itsleeds.github.io/tds/).
 
-## TDCA Timetable (2026–27)
+## TDCA Timetable (2026–27) {.compact}
 
 ::::: columns
 ::: {.column width="42%"}
 
-- **Structured Learning:** Balanced progression through Semester 1 (Oct–Dec 2026).
-
+- **Structured Learning:** Balanced progression across Semester 1 (Weeks 1–10, Oct–Dec 2026).
 - **Practicals:** Dr Christopher Rushton (Wednesdays & Thursdays) in computer clusters.
-
-- **Lectures & Workshops:** Thursdays (Liberty Building & Chem Eng) covering survey design, sensor data, and modeling.
-
+- **Lectures & Workshops:** Thursdays (Liberty Building & Chem Eng) covering survey design, sensor data, and modelling.
 - **Fieldwork:** Full-day data collection sessions (Fridays, Weeks 4 & 5).
-
-- **Week 9 Highlight:** *Data Science and AI for Transport Planning* with Prof Robin Lovelace (Thu 26 Nov 2026, 13:00–14:00).
-
-- **Datasets & Portal:** [CSV dataset](timetable.csv) | [Leeds Timetable Portal](https://timetable.leeds.ac.uk/teaching/202627/reporting/Individual?objectclass=module&idtype=name&identifier=TRAN5032M01&template=SWSCUST+module+Individual&days=1-7&weeks=1-52&periods=1-21)
+- **Week 9 Highlight:** *Data Science and AI for Transport Planning* — Prof Robin Lovelace (Thu 26 Nov 2026, 13:00–14:00).
+- **Datasets:** [CSV](timetable.csv) | [Leeds Timetable Portal](https://timetable.leeds.ac.uk/teaching/202627/reporting/Individual?objectclass=module&idtype=name&identifier=TRAN5032M01&template=SWSCUST+module+Individual&days=1-7&weeks=1-52&periods=1-21)
 
 :::
 ::: {.column width="58%"}
@@ -217,18 +218,18 @@ bibliography: references.bib
 
 ```{mermaid}
 flowchart LR
-  subgraph Source["Source"]
-    A[Raw transport data<br/>sensors, GPS, smart cards]
-    B[Scripts<br/>Python / R / Quarto]
+  subgraph Source["Source & Code"]
+    A["Raw transport data<br/>sensors, GPS, smart cards"]
+    B["Scripts & Notebooks<br/>Python / R / Quarto"]
   end
   subgraph AI_Layer["AI Integration"]
-    C[AI coding assistant<br/>Copilot / Codex]
-    D[Agentic loop<br/>iterate, refine, verify]
+    C["AI coding assistant<br/>Copilot / Codex"]
+    D["Agentic loop<br/>iterate, refine, verify"]
   end
-  subgraph Output["Reproducible Output"]
-    E[Interactive dashboards<br/>Streamlit / Shiny]
-    F[Published slides<br/>Quarto revealjs]
-    G[Version-controlled<br/>Git / GitHub]
+  subgraph Output["Reproducible Outputs"]
+    E["Interactive dashboards<br/>Streamlit / Shiny"]
+    F["Published slides & docs<br/>Quarto HTML / PDF"]
+    G["Version-controlled repo<br/>Git / GitHub"]
   end
   A --> B
   B <--> C
@@ -238,7 +239,7 @@ flowchart LR
   B --> G
 ```
 
-## References {scrollable="true"}
+## References
 
 ::: {#refs}
 :::
