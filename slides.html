@@ -56,6 +56,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-7ad92b9edfb8c06a94474e9745014179.css">
+  <link rel="stylesheet" href="slides.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -174,9 +175,9 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <h2>Introduction</h2>
 <ul>
 <li>Context: new digital tools for transport planning</li>
-<li><strong>Reproducible data science</strong> -&gt; impact</li>
-<li><strong>Reproducible data science</strong> -&gt; effectively integrate <strong>AI</strong> into your work</li>
-<li>Excel-based analysis -&gt; dynamic, reproducible, scalable workflows</li>
+<li><strong>Reproducible data science</strong> → impact</li>
+<li><strong>Reproducible data science</strong> → effectively integrate <strong>AI</strong> into your work</li>
+<li>Excel-based analysis → dynamic, reproducible, scalable workflows</li>
 <li><strong>AI has potential to reshape every sector and organisation</strong>
 <ul>
 <li>Potential only realised by people using reproducible workflows</li>
@@ -187,25 +188,24 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <section id="what-are-data-science-and-ai" class="slide level2">
 <h2>What are Data Science and AI?</h2>
 <blockquote>
-<p>Data science: turns raw data into understanding and insight</p>
+<p><strong>Data science:</strong> turns raw data into understanding and insight.</p>
 </blockquote>
 <blockquote>
-<p>AI: generative language models to generate code and other outputs for decision-making.</p>
+<p><strong>AI:</strong> generative language models to generate code and other outputs for decision-making.</p>
 </blockquote>
 <ul>
-<li><strong>Machine Learning</strong>: pattern recognition, prediction, and optimisation: from traffic forecasting to demand modelling.</li>
-<li>In transport, this means handling a wide range of data sources including datasets on transport infrastructure, behaviour and more
+<li><strong>Machine Learning:</strong> pattern recognition, prediction, and optimisation — from traffic forecasting to demand modelling.</li>
+<li>In transport, this means handling diverse data sources on transport infrastructure, behaviour, and flows:
 <ul>
-<li>There’s more data than ever before</li>
-<li>Example: OpenStreetMap data which is available worldwide <span class="citation" data-cites="boeing_osmnx_2017">(<a href="#/references" role="doc-biblioref" onclick="">Boeing 2017</a>)</span>.</li>
+<li>There is more data than ever before.</li>
+<li>Example: OpenStreetMap data available worldwide <span class="citation" data-cites="boeing_osmnx_2017">(<a href="#/references" role="doc-biblioref" onclick="">Boeing 2017</a>)</span>.</li>
 </ul></li>
 </ul>
 </section>
-<section id="ai-for-transport-planning" class="slide level2">
+<section id="ai-for-transport-planning" class="slide level2 smaller">
 <h2>AI for Transport Planning</h2>
 <ul>
-<li>AI is transforming transport (e.g., traffic prediction, safety analysis), but its value is unlocked only when integrated into reproducible workflows.</li>
-<li><strong>Why reproducible environments are the best way to leverage AI</strong>:</li>
+<li>AI is transforming transport (traffic prediction, safety analysis), but value is unlocked only through <strong>reproducible workflows</strong>.</li>
 </ul>
 <table class="caption-top">
 <colgroup>
@@ -234,7 +234,7 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <tr class="odd">
 <td><strong>Agentic Loops</strong></td>
 <td>Execution pipelines are programmatic, automated, and self-contained.</td>
-<td>AI agents can run automated loops to optimize parameters and test models.</td>
+<td>AI agents can run automated loops to optimise parameters and test models.</td>
 </tr>
 <tr class="even">
 <td><strong>Robust Stability</strong></td>
@@ -243,66 +243,72 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 </tr>
 </tbody>
 </table>
-<ul>
-<li>The key insight: AI works best when the environment is <strong>defined in code</strong>, so every iteration is captured, auditable, and repeatable.</li>
-</ul>
+<div class="takeaway-box">
+<p><strong>Key insight:</strong> AI works best when the environment is <strong>defined in code</strong>, so every iteration is captured, auditable, and repeatable.</p>
+</div>
 </section>
-<section id="ai-in-action-jamcam-lab-computer-vision" class="slide level2">
+<section id="ai-in-action-jamcam-lab-computer-vision" class="slide level2 smaller">
 <h2>AI in Action: JamCam Lab &amp; Computer Vision</h2>
 <div class="columns">
-<div class="column" style="width:55%;">
+<div class="column" style="width:54%;">
 <ul>
-<li><p>Real-world AI project: <a href="https://github.com/chris-r-uol/tfl_yolo">JamCam Lab (<code>tfl_yolo</code>)</a>, developed by Dr Christopher Rushton (ITS Leeds).</p></li>
-<li><p>Uses YOLO object detection on ~890 live Transport for London (TfL) roadside camera feeds.</p></li>
-<li><p>Automated counting and classification of vehicles, cyclists, and pedestrians.</p></li>
-<li><p><strong>Core planning insight:</strong> <em>“Getting counts out of a traffic camera is easy; getting counts you would defend in public is the whole course.”</em></p></li>
-<li><p>Demonstrates why AI model outputs must be paired with camera calibration, perspective correction, validation, and domain expertise.</p></li>
+<li>Real-world AI project: <a href="https://github.com/chris-r-uol/tfl_yolo">JamCam Lab (<code>tfl_yolo</code>)</a>, developed by Dr Christopher Rushton (ITS Leeds).</li>
+<li>Uses YOLO object detection on ~890 live Transport for London (TfL) roadside camera feeds.</li>
+<li>Automated counting and classification of vehicles, cyclists, and pedestrians.</li>
+<li>Demonstrates why AI outputs must be paired with camera calibration, perspective correction, validation, and domain expertise.</li>
 </ul>
-</div><div class="column" style="width:45%;">
+<div class="takeaway-box">
+<p><strong>Core planning insight:</strong> <em>“Getting counts out of a traffic camera is easy; getting counts you would defend in public is the whole course.”</em></p>
+</div>
+</div><div class="column" style="width:46%;">
+<div class="card-panel">
+<p><span class="card-title">Direct Link to TDCA Practicals</span></p>
 <ul>
-<li><p>Direct link to practical teaching in TDCA:</p>
-<ul>
-<li>Connects computer vision to spatial analysis.</li>
-<li>Reproducible pipeline: fetch <span class="math inline">\(\rightarrow\)</span> detect <span class="math inline">\(\rightarrow\)</span> calibrate <span class="math inline">\(\rightarrow\)</span> aggregate <span class="math inline">\(\rightarrow\)</span> validate <span class="math inline">\(\rightarrow\)</span> merge.</li>
-<li>Accessible via GitHub Codespaces with zero local installation.</li>
-</ul></li>
+<li>Connects computer vision to spatial transport analysis.</li>
+<li>Reproducible pipeline: <code>fetch</code> → <code>detect</code> → <code>calibrate</code> → <code>aggregate</code> → <code>validate</code> → <code>merge</code>.</li>
+<li>Accessible via <strong>GitHub Codespaces</strong> with zero local installation.</li>
 </ul>
+</div>
 </div></div>
 </section>
-<section id="the-ai-paradox-upsides-and-ai-surrender" class="slide level2">
+<section id="the-ai-paradox-upsides-and-ai-surrender" class="slide level2 smaller">
 <h2>The AI Paradox: Upsides and “AI Surrender”</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="great-potential-upsides">Great Potential Upsides</h3>
+<div class="card-panel">
+<p><span class="card-title">Great Potential Upsides</span></p>
 <ul>
-<li><p><strong>Rapid Prototyping:</strong> Instant generation of boilerplate code, data wrangling pipelines, and plotting syntax.</p></li>
-<li><p><strong>Error Diagnostics:</strong> Fast explanations for obscure stack traces and package dependency errors.</p></li>
-<li><p><strong>Exploratory Breadth:</strong> Quickly learning new libraries (e.g., GeoPandas, Shapely, PyTorch, Quarto).</p></li>
+<li><strong>Rapid Prototyping:</strong> Instant generation of boilerplate code, data wrangling pipelines, and plotting syntax.</li>
+<li><strong>Error Diagnostics:</strong> Fast explanations for obscure stack traces and package dependency errors.</li>
+<li><strong>Exploratory Breadth:</strong> Quickly learning new libraries (e.g., GeoPandas, Shapely, PyTorch, Quarto).</li>
 </ul>
+</div>
 </div><div class="column" style="width:50%;">
-<h3 id="the-risk-of-ai-surrender">The Risk of “AI Surrender”</h3>
+<div class="card-panel card-warn">
+<p><span class="card-title">The Risk of “AI Surrender”</span></p>
 <ul>
-<li><p><strong>Cognitive Surrender:</strong> Documented by the <a href="https://facultygovernance.mit.edu/">MIT Committee on AI in Education</a> <span class="citation" data-cites="mit_ai_committee_2026">(<a href="#/references" role="doc-biblioref" onclick="">MIT Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training 2026</a>)</span>.</p></li>
-<li><p><strong>Loss of Productive Struggle:</strong> Outsourcing cognitive effort at the first sign of difficulty.</p></li>
-<li><p><strong>The “Illusion of Learning”:</strong> Getting correct answers quickly creates a false sense of personal mastery without mental encoding.</p></li>
-<li><p><strong>Social Erosion:</strong> Marked drops in study group collaboration and office hour attendance.</p></li>
+<li><strong>Cognitive Surrender:</strong> Documented by the <a href="https://facultygovernance.mit.edu/">MIT Committee on AI in Education</a> <span class="citation" data-cites="mit_ai_committee_2026">(<a href="#/references" role="doc-biblioref" onclick="">2026</a>)</span>.</li>
+<li><strong>Loss of Productive Struggle:</strong> Outsourcing cognitive effort at the first sign of difficulty.</li>
+<li><strong>The “Illusion of Learning”:</strong> Fast correct answers create a false sense of mastery without mental encoding.</li>
+<li><strong>Social Erosion:</strong> Marked drops in study group collaboration and office hour attendance.</li>
 </ul>
+</div>
 </div></div>
 </section>
-<section id="empirical-evidence-homework-vs.-exams" class="slide level2">
+<section id="empirical-evidence-homework-vs.-exams" class="slide level2 compact">
 <h2>Empirical Evidence: Homework vs.&nbsp;Exams</h2>
 <div class="columns">
-<div class="column" style="width:45%;">
+<div class="column" style="width:42%;">
 <ul>
-<li><p><strong>The Generative AI Penalty:</strong> Randomized trial by Bastani et al. <span class="citation" data-cites="bastani_generative_2025">(<a href="#/references" role="doc-biblioref" onclick="">Bastani et al. 2025</a>)</span> in <em>PNAS</em>:</p>
+<li><strong>The Generative AI Penalty:</strong> Randomised trial by <span class="citation" data-cites="bastani_generative_2025">Bastani et al. (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span> in <em>PNAS</em>:
 <ul>
-<li>Homework/practice scores rose <strong>+48%</strong> with standard AI (“GPT Base”).</li>
-<li>On unassisted exams, those same students scored <strong>17% worse</strong> than students who never used AI!</li>
+<li>Practice scores rose <strong>+48%</strong> with standard AI (“GPT Base”).</li>
+<li>On unassisted exams, those same students scored <strong>17% worse</strong> than students who never used AI.</li>
 </ul></li>
-<li><p><strong>International Evidence (26,000+ students):</strong> Unrestricted AI boosts homework scores (<strong>+18%</strong>) while closed-book exam scores drop (<strong>-20%</strong>).</p></li>
-<li><p><strong>The Remedy:</strong> Guardrails and friction (“GPT Tutor”) that prompt thinking rather than providing copy-paste solutions.</p></li>
+<li><strong>International Evidence (26,000+ students):</strong> Unrestricted AI boosts homework (<strong>+18%</strong>) while closed-book exam scores drop (<strong>−20%</strong>).</li>
+<li><strong>The Remedy:</strong> Guardrails and friction (“GPT Tutor”) that prompt thinking rather than copy-paste solutions.</li>
 </ul>
-</div><div class="column" style="width:55%;">
+</div><div class="column" style="width:58%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/ai-homework-vs-exams.png" style="width:100.0%" alt="Chart comparing AI impact on homework versus unassisted exams"></p>
@@ -332,26 +338,26 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <li><strong>Sharing &amp; Collaboration:</strong> Open-source packages mean you stand on the shoulders of giants.</li>
 <li><strong>Automation:</strong> Spend more time thinking and designing solutions, less time copy-pasting.</li>
 <li><strong>AI as an Accelerator:</strong> Assistants generate boilerplate and explain errors, but understanding the code you run is still essential.</li>
-<li><strong>The Learning Curve:</strong> Programming has a steeper start than point-and-click tools. The Python tutorials in this module are designed to guide you step-by-step.</li>
+<li><strong>The Learning Curve:</strong> Programming has a steeper start than point-and-click tools. The Python tutorials in this module guide you step-by-step.</li>
 </ul>
 </section>
 <section id="tools-of-the-trade" class="slide level2">
 <h2>Tools of the Trade</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:48%;">
 <ul>
 <li><strong>Python:</strong> A first-class citizen in data science and AI. Versatile and powerful.</li>
 <li><strong>R:</strong> Excellent for statistics and spatial analysis <span class="citation" data-cites="arribas-bel_course_2019">(<a href="#/references" role="doc-biblioref" onclick="">Arribas-Bel 2019</a>)</span>.</li>
 <li><strong>Quarto:</strong> The multi-language publishing tool — mixes code, text, and output; renders to slides, PDF, HTML <span class="citation" data-cites="allaire_quarto_2024">(<a href="#/references" role="doc-biblioref" onclick="">Allaire et al. 2024</a>)</span>.</li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:52%;">
 <ul>
 <li><strong>AI coding assistants:</strong> Tools like GitHub Copilot work directly in your editor, helping you write, understand, and debug code faster.</li>
-<li><strong>The ecosystem:</strong> These tools combine — Python/R for analysis, Quarto for communication, AI assistants for productivity.</li>
+<li><strong>The ecosystem:</strong> Python/R for analysis, Quarto for communication, AI assistants for productivity.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Mobile-Tartu-Wallpaper-Image-For-Quarto-Presentation.png" style="width:80.0%" alt="Reproducible data science environment"></p>
+<p><img data-src="images/Mobile-Tartu-Wallpaper-Image-For-Quarto-Presentation.png" style="width:82.0%" alt="Reproducible data science environment"></p>
 <figcaption>Reproducible data science ecosystem</figcaption>
 </figure>
 </div>
@@ -360,7 +366,7 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <section id="interactive-visualisations" class="slide level2">
 <h2>Interactive Visualisations</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:46%;">
 <ul>
 <li>Made possible with code (e.g., Python’s <code>Streamlit</code>, <code>Plotly</code>, or R’s <code>Shiny</code>).</li>
 <li><strong>Impact:</strong> Stakeholders can “play” with the data.</li>
@@ -371,7 +377,7 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 </ul></li>
 <li><em>Increases the transparency and reach of research.</em></li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:54%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/Flowmap-Blue-Of-Pamplona-OD-Flows.png" style="width:100.0%" alt="Interactive flow map showing origin-destination data"></p>
@@ -388,23 +394,23 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <ul>
 <li><strong>Clean &amp; Validate:</strong> Handling missing values, sensor failures, and anomalies.</li>
 <li><strong>Visualise:</strong> Exposing spatial patterns, bottlenecks, and travel trends.</li>
-<li><strong>Model:</strong> Predicting demand and optimizing traffic flow.</li>
+<li><strong>Model:</strong> Predicting demand and optimising traffic flow.</li>
 </ul></li>
 <li><strong>How AI Enhances This:</strong> Automating anomaly detection, clustering travel patterns, and forecasting future demand.</li>
-<li><strong>Foundation for the Future:</strong> TDCA builds the core skills for working with transport data. These scale directly into next modules like <a href="https://itsleeds.github.io/tds/">Transport Data Science (TDS)</a>.</li>
+<li><strong>Foundation for the Future:</strong> TDCA builds the core skills for working with transport data — scaling directly into <a href="https://itsleeds.github.io/tds/">Transport Data Science (TDS)</a>.</li>
 </ul>
 </section>
-<section id="tdca-timetable-202627" class="slide level2">
+<section id="tdca-timetable-202627" class="slide level2 compact">
 <h2>TDCA Timetable (2026–27)</h2>
 <div class="columns">
 <div class="column" style="width:42%;">
 <ul>
-<li><p><strong>Structured Learning:</strong> Balanced progression through Semester 1 (Oct–Dec 2026).</p></li>
-<li><p><strong>Practicals:</strong> Dr Christopher Rushton (Wednesdays &amp; Thursdays) in computer clusters.</p></li>
-<li><p><strong>Lectures &amp; Workshops:</strong> Thursdays (Liberty Building &amp; Chem Eng) covering survey design, sensor data, and modeling.</p></li>
-<li><p><strong>Fieldwork:</strong> Full-day data collection sessions (Fridays, Weeks 4 &amp; 5).</p></li>
-<li><p><strong>Week 9 Highlight:</strong> <em>Data Science and AI for Transport Planning</em> with Prof Robin Lovelace (Thu 26 Nov 2026, 13:00–14:00).</p></li>
-<li><p><strong>Datasets &amp; Portal:</strong> <a href="timetable.csv">CSV dataset</a> | <a href="https://timetable.leeds.ac.uk/teaching/202627/reporting/Individual?objectclass=module&amp;idtype=name&amp;identifier=TRAN5032M01&amp;template=SWSCUST+module+Individual&amp;days=1-7&amp;weeks=1-52&amp;periods=1-21">Leeds Timetable Portal</a></p></li>
+<li><strong>Structured Learning:</strong> Balanced progression across Semester 1 (Weeks 1–10, Oct–Dec 2026).</li>
+<li><strong>Practicals:</strong> Dr Christopher Rushton (Wednesdays &amp; Thursdays) in computer clusters.</li>
+<li><strong>Lectures &amp; Workshops:</strong> Thursdays (Liberty Building &amp; Chem Eng) covering survey design, sensor data, and modelling.</li>
+<li><strong>Fieldwork:</strong> Full-day data collection sessions (Fridays, Weeks 4 &amp; 5).</li>
+<li><strong>Week 9 Highlight:</strong> <em>Data Science and AI for Transport Planning</em> — Prof Robin Lovelace (Thu 26 Nov 2026, 13:00–14:00).</li>
+<li><strong>Datasets:</strong> <a href="timetable.csv">CSV</a> | <a href="https://timetable.leeds.ac.uk/teaching/202627/reporting/Individual?objectclass=module&amp;idtype=name&amp;identifier=TRAN5032M01&amp;template=SWSCUST+module+Individual&amp;days=1-7&amp;weeks=1-52&amp;periods=1-21">Leeds Timetable Portal</a></li>
 </ul>
 </div><div class="column" style="width:58%;">
 <div class="quarto-figure quarto-figure-center">
@@ -424,18 +430,18 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 <div>
 
 <pre class="mermaid mermaid-js">flowchart LR
-  subgraph Source["Source"]
-    A[Raw transport data&lt;br/&gt;sensors, GPS, smart cards]
-    B[Scripts&lt;br/&gt;Python / R / Quarto]
+  subgraph Source["Source &amp; Code"]
+    A["Raw transport data&lt;br/&gt;sensors, GPS, smart cards"]
+    B["Scripts &amp; Notebooks&lt;br/&gt;Python / R / Quarto"]
   end
   subgraph AI_Layer["AI Integration"]
-    C[AI coding assistant&lt;br/&gt;Copilot / Codex]
-    D[Agentic loop&lt;br/&gt;iterate, refine, verify]
+    C["AI coding assistant&lt;br/&gt;Copilot / Codex"]
+    D["Agentic loop&lt;br/&gt;iterate, refine, verify"]
   end
-  subgraph Output["Reproducible Output"]
-    E[Interactive dashboards&lt;br/&gt;Streamlit / Shiny]
-    F[Published slides&lt;br/&gt;Quarto revealjs]
-    G[Version-controlled&lt;br/&gt;Git / GitHub]
+  subgraph Output["Reproducible Outputs"]
+    E["Interactive dashboards&lt;br/&gt;Streamlit / Shiny"]
+    F["Published slides &amp; docs&lt;br/&gt;Quarto HTML / PDF"]
+    G["Version-controlled repo&lt;br/&gt;Git / GitHub"]
   end
   A --&gt; B
   B &lt;--&gt; C
@@ -450,7 +456,7 @@ Robin Lovelace<br><br><span style="font-size:0.7em">Online version: <a href="htt
 </div>
 </div>
 </section>
-<section id="references" class="slide level2 smaller scrollable" data-scrollable="true">
+<section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-allaire_quarto_2024" class="csl-entry" role="listitem">
@@ -507,6 +513,7 @@ MIT Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training. 202
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
+'pdfMaxPagesPerSlide': 1,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
@@ -653,12 +660,12 @@ MIT Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training. 202
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1280,
 
-        height: 700,
+        height: 720,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 8.0e-2,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js',
