@@ -16,6 +16,8 @@ mathjax-config.js
 *.parquet
 *.arrow
 *.csv
+!timetable.csv
+!tran5032m_sessions_202627.csv
 *.geojson
 *.gpkg
 
