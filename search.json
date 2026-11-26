@@ -77,6 +77,13 @@
     "text": "Making the Most of Transport Data\n\nDiverse Data Sources: Smart card taps, GPS trajectories, traffic counts, and crowd-sourced feeds.\nWhere the value lies: Not in raw datasets, but in your processing pipeline:\n\nClean & Validate: Handling missing values, sensor failures, and anomalies.\nVisualise: Exposing spatial patterns, bottlenecks, and travel trends.\nModel: Predicting demand and optimising traffic flow.\n\nHow AI Enhances This: Automating anomaly detection, clustering travel patterns, and forecasting future demand.\nFoundation for the Future: TDCA builds the core skills for working with transport data — scaling directly into Transport Data Science (TDS)."
   },
   {
+    "objectID": "slides.html#programmatic-data-import",
+    "href": "slides.html#programmatic-data-import",
+    "title": "Data Science and AI for Data-Driven Transport Planning",
+    "section": "Programmatic Data Import",
+    "text": "Programmatic Data Import\n\n\n\nSkip manual downloads: Import datasets directly in code via URLs, APIs, GitHub releases, or data packages rather than point-and-click portals.\nReproducible & auditable: Every analysis starts from a scripted, versioned data source that anyone can re-run.\nScale effortlessly: Handle national-scale datasets (e.g., UK 2021 Census OD flows, OpenStreetMap, DfT counts) with the same code.\nExample: England & Wales 2021 Census origin–destination desire lines coloured by % Car mode share.\nSource: github.com/itsleeds/2021-census-od-data\n\n\n\n\n\nEngland & Wales 2021 Census OD flows by car mode share. Source: itsleeds/2021-census-od-data."
+  },
+  {
     "objectID": "slides.html#tdca-timetable-202627",
     "href": "slides.html#tdca-timetable-202627",
     "title": "Data Science and AI for Data-Driven Transport Planning",
