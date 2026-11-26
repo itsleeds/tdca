@@ -194,6 +194,25 @@ bibliography: references.bib
 - **How AI Enhances This:** Automating anomaly detection, clustering travel patterns, and forecasting future demand.
 - **Foundation for the Future:** TDCA builds the core skills for working with transport data — scaling directly into [Transport Data Science (TDS)](https://itsleeds.github.io/tds/).
 
+## Programmatic Data Import {.smaller}
+
+::::: columns
+::: {.column width="48%"}
+
+- **Skip manual downloads:** Import datasets directly in code via URLs, APIs, GitHub releases, or data packages rather than point-and-click portals.
+- **Reproducible & auditable:** Every analysis starts from a scripted, versioned data source that anyone can re-run.
+- **Scale effortlessly:** Handle national-scale datasets (e.g., UK 2021 Census OD flows, OpenStreetMap, DfT counts) with the same code.
+- **Example:** England & Wales 2021 Census origin–destination desire lines coloured by `% Car` mode share.
+- **Source:** [github.com/itsleeds/2021-census-od-data](https://github.com/itsleeds/2021-census-od-data)
+
+:::
+::: {.column width="52%"}
+
+![England & Wales 2021 Census OD flows by car mode share. Source: [itsleeds/2021-census-od-data](https://github.com/itsleeds/2021-census-od-data).](images/2021-census-od-car-share.jpg){width="100%" fig-alt="Map of England and Wales 2021 Census origin-destination desire lines coloured by percentage car mode share"}
+
+:::
+:::::
+
 ## TDCA Timetable (2026–27) {.compact}
 
 ::::: columns
