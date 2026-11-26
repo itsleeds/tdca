@@ -243,3 +243,13 @@ flowchart LR
 
 ::: {#refs}
 :::
+
+## Feedback & Questions
+
+::: {style="text-align: center; margin-top: 0.4em;"}
+
+![Scan to open the form](images/feedback-qr.svg){width="360px" fig-alt="QR code linking to https://forms.cloud.microsoft/e/tBUQLHwcbu"}
+
+[forms.cloud.microsoft/e/tBUQLHwcbu](https://forms.cloud.microsoft/e/tBUQLHwcbu){style="font-size: 0.9em;"}
+
+:::
